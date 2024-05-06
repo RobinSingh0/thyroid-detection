@@ -1,6 +1,4 @@
 streamlit
-python3 -m venv myenv
-source myenv/bin/activate
 pip install Pillow
 Pillow==8.1.1
 tensorflow-cpu
