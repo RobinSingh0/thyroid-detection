@@ -19,12 +19,12 @@ def loading_model():
 
 cnn = loading_model()
 st.write("""
-# Thyroid detetction using x - ray images
+# Thyroid detetction using ultrasound images
 by robin abhishek manikanta harshvardhan
 """)
 
 
-temp = st.file_uploader("Upload X-Ray Image")
+temp = st.file_uploader("Upload ultrasound Image")
 #temp = temp.decode()
 
 buffer = temp
@@ -50,7 +50,7 @@ else:
     # predict
     preds = cnn.predict(pp_img)
     if preds >= 0.5:
-        out = ('I am {:.2%} percent confirmed that this is a Tuberculosis case'.format(
+        out = ('I am {:.2%} percent confirmed that this is a Thyroid case'.format(
             preds[0][0]))
 
     else:
